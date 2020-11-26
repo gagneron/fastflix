@@ -11,3 +11,117 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.MuiAppBar-root  {
+    position: fixed;
+    color: white;
+}
+
+
+/** TOOLBAR **/
+
+.toolbar .MuiToolbar-root {
+    justify-content: space-between;
+}
+.searchArea {
+    display: flex;
+}
+.searchArea input {
+    background-color: white;
+    padding: 6px 10px;
+    margin-right: 6px;
+}
+
+.MuiIconButton-root.cartBtn {
+    color: white;
+}
+
+
+
+/**  MAIN BODY **/
+#selectionArea {
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.searchError {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.numResults {
+    padding: 20px 0px;
+}
+
+.poster {
+    cursor: pointer;
+    line-height: 0px;
+}
+.emptyPoster {
+    line-height: 20px;
+    border: 1px solid gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    height: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+}
+
+.poster > div {
+    box-shadow: 0px 0px 1px lightgray;
+}
+.poster.selected > div {
+    box-shadow: 0px 0px 5px 4px green;
+}
+
+.pagination {
+    padding: 10px 0px;
+    position: fixed;
+    bottom: 0px;
+    background-color: white;
+    /* width: 100%; */
+    border-top: 1px solid #DDDDDD;
+}
+
+
+/** CHECKOUT MODAL **/
+
+#checkoutModal .MuiPaper-root {
+    min-height: 400px;
+    min-width: 300px;
+}
+
+#checkoutModal .closeBtn {
+    float: right;
+}
+#checkoutModal .row {
+    border-top: 1px solid #DDDDDD;
+    display: flex;
+    justify-content: space-between;
+}
+
+#checkoutModal .row > span {
+    padding-top: 16px;
+}
+
+
+/** Mobile styling **/
+@media (max-width: 959px) {
+    .searchArea .MuiButton-root {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+    .toolbar .MuiToolbar-root {
+        padding-left: 8px;
+        padding-right: 0px;
+    }
+    .toolbar .MuiContainer-root {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
